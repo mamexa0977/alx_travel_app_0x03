@@ -1,0 +1,31 @@
+Booking Confirmation - ALX Travel
+
+Dear {{ user_name }},
+
+Thank you for booking with ALX Travel! Your reservation has been confirmed.
+
+Booking Details:
+----------------
+Booking Reference: {{ booking.reference }}
+Property: {{ booking.listing.title }}
+Location: {{ booking.listing.location }}
+Check-in: {{ booking.check_in }}
+Check-out: {{ booking.check_out }}
+Number of Guests: {{ booking.number_of_guests }}
+Total Price: ${{ booking.total_price }}
+Booking Status: {{ booking.get_status_display }}
+
+{% if booking.special_requests %}
+Special Requests:
+{{ booking.special_requests }}
+{% endif %}
+
+If you have any questions or need to make changes to your booking, please don't hesitate to contact us.
+
+Best regards,
+The ALX Travel Team
+
+---
+ALX Travel | 123 Travel Street, City, Country
+Email: support@alxtravel.com | Phone: +1 (555) 123-4567
+This is an automated message, please do not reply to this email.
